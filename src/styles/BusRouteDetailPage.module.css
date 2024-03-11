@@ -1,0 +1,93 @@
+.container {
+  width: 80%;
+  min-width: 400px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.CheckedBusRoute {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  border: 1px solid #f9ca26;
+  background-color: #f9ca26;
+  border-radius: 30px;
+  padding: 16px 16px 16px 32px;
+  margin-top: -30px;
+  color: #007354;
+  position: relative;
+  z-index: 999;
+
+  .dirTipText {
+    color: #000;
+    font-size: 18px;
+  }
+}
+
+.RouteStationList {
+  .operation {
+    margin-top: -25px;
+    padding: 35px 10px 10px 16px;
+    background-color: rgba(204, 204, 204, 0.3);
+    border-radius: 0px 0px 15px 15px;
+    color: #eb0222;
+  }
+
+  .RouteStationItem {
+    font-size: 24px;
+    position: relative;
+    padding: 16px;
+    border-bottom: 1px solid #ccc;
+  }
+  .RouteStationItem::after {
+    content: ">";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    translate: -50%;
+  }
+}
+
+.realTiemBusContainer {
+  width: 95%;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  font-size: 20px;
+  background-color: #007354;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px;
+  .realTiemBus {
+    width: 30px;
+  }
+}
+
+/* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width: 480px) and (max-width: 700px) {
+  .container {
+    font-size: 16px;
+  }
+  .RouteStationList {
+    .RouteStationItem {
+      font-size: 20px;
+    }
+  }
+}
+
+/* 모바일 세로 (해상도 ~ 479px)*/
+@media all and (max-width: 479px) {
+  .container {
+    font-size: 16px;
+  }
+  .RouteStationList {
+    .RouteStationItem {
+      font-size: 18px;
+    }
+  }
+  .realTiemBusContainer {
+    font-size: 18px;
+    padding: 4px;
+  }
+}

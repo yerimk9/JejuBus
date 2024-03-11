@@ -1,0 +1,15 @@
+.googleLoginBox {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(204, 204, 204, 0.4);
+
+  display: flex;
+  justify-content: center;
+
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 20px;
+  }
+}

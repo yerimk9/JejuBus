@@ -1,0 +1,15 @@
+.kakaoLoginBox {
+  width: 70px;
+  height: 70px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+
+  button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 16px;
+  }
+}

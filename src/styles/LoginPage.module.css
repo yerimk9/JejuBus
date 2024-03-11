@@ -1,0 +1,22 @@
+.btnContainer {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 65px;
+  height: 65px;
+}
+
+.socialLoginBox {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}

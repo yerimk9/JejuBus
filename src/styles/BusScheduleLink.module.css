@@ -1,0 +1,12 @@
+.busScheduleItem {
+  background-color: rgba(204, 204, 204, 0.2);
+  border: 1px solid #ccc;
+  border-width: 0px 1px 1px 0px;
+  padding: 20px;
+}
+
+@media all and (max-width: 700px) {
+  .busScheduleItem {
+    padding: 16px;
+  }
+}

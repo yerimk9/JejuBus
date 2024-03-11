@@ -1,0 +1,52 @@
+.routeItems {
+  width: 80%;
+  min-width: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.routeItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 14px;
+  border-bottom: 0.5px solid #007354;
+  position: relative;
+}
+
+.routeItem::after {
+  content: ">";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.removeHistory::after {
+  content: "X";
+}
+
+.dirTip {
+  font-size: 18px;
+  color: #007354;
+}
+
+.historyeditorBtn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+@media all and (max-width: 600px) {
+  .routeItems {
+    font-size: 18px;
+  }
+  .dirTip {
+    font-size: 16px;
+  }
+  .routeItem {
+    padding: 12px;
+  }
+}

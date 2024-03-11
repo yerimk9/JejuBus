@@ -1,0 +1,12 @@
+.btn {
+  width: 100%;
+  min-height: 65px;
+  font-size: 26px;
+  letter-spacing: 0.3rem;
+  margin-top: 5px;
+}
+
+.error {
+  padding-top: 10px;
+  color: #d63333;
+}

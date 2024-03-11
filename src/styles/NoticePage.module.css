@@ -1,0 +1,75 @@
+.notice {
+  font-size: 30px;
+  background-color: #f9ca26;
+  border-radius: 20px;
+  width: 50%;
+  min-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.noticeItems {
+  width: 80%;
+  min-width: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.noticeItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #007354;
+}
+
+.noticeItemTitle {
+  padding: 12px;
+}
+
+.noticeItemDate {
+  align-self: flex-end;
+  color: #007354;
+  font-size: 16px;
+  padding: 2px;
+}
+
+@media all and (min-width: 610px) and (max-width: 780px) {
+  .noticeItems {
+    width: 80%;
+    font-size: 18px;
+  }
+  .noticeItemDate {
+    font-size: 18px;
+  }
+  .notice {
+    font-size: 24px;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 609px) {
+  .noticeItems {
+    width: 90%;
+    font-size: 16px;
+  }
+  .noticeItemDate {
+    font-size: 16px;
+  }
+  .notice {
+    font-size: 22px;
+  }
+}
+
+@media all and (max-width: 499px) {
+  .noticeItems {
+    width: 100%;
+    font-size: 14px;
+  }
+  .notice {
+    font-size: 20px;
+  }
+  .noticeItemDate {
+    font-size: 14px;
+  }
+}

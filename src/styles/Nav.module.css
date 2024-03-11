@@ -1,0 +1,89 @@
+.container {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  align-items: center;
+}
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 30px;
+}
+.logoImg {
+  width: 40px;
+}
+.logoText {
+  color: #007354;
+  font-size: 60px;
+  min-width: 80px;
+}
+
+.userContainer {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+
+  .userLogin,
+  .userLogout {
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 65px;
+    font-size: 18px;
+  }
+}
+
+.choice {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #f9ca26;
+  border: none;
+  font-size: 20px;
+}
+
+@media all and (min-width: 850px) and (max-width: 900px) {
+  .logoText {
+    font-size: 50px;
+  }
+}
+
+/* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width: 480px) and (max-width: 850px) {
+  .logoText {
+    font-size: 38px;
+
+    min-width: 124px;
+  }
+  .choice {
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width: 479px) {
+  .logoText {
+    font-size: 22px;
+
+    min-width: 74px;
+  }
+
+  .logoImg {
+    width: 30px;
+  }
+
+  .choice {
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
