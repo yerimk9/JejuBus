@@ -22,7 +22,7 @@ app.listen(3001, () => {
 });
 
 // 공지사항 정보 (17)
-app.get("/notice", async function (req, res) {
+app.get("/api/notice", async function (req, res) {
   try {
     const response = await fetch(
       "http://busopen.jeju.go.kr/OpenAPI/service/bis/Notice"
