@@ -52,7 +52,6 @@ app.get("/station", async function (req, res) {
 // 정류장 도착 예정 정보 [정류장 아이디]
 app.get("/arrivalInfo", async function (req, res) {
   const { stationId } = req.query;
-
   try {
     const response = await fetch(
       `https://bus.jeju.go.kr/api/searchArrivalInfoList.do?station_id=${stationId}`
