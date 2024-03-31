@@ -14,7 +14,7 @@
         {
           "type": "query",
           "key": "station_id",
-          "value": "stationId"
+          "value": "station_id"
         }
       ],
       "destination": "https://bus.jeju.go.kr/api/searchArrivalInfoList.do/:path*"
