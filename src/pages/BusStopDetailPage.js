@@ -29,9 +29,8 @@ function BusStopDetailPage(props) {
   useEffect(() => {
     const fetchArrivalInfo = async () => {
       try {
-        const encodedStationId = encodeURIComponent(stationInfo.stationId);
         const response = await fetch(
-          `/arrivalInfo?stationId=${encodedStationId}`
+          "/arrivalInfo?stationId=" + stationInfo.stationId // 정류장 도착 예정 정보
         );
         const json = await response.json();
         setArrivalInfo(json);

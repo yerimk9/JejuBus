@@ -1,16 +1,24 @@
 {
   "rewrites": [
     {
-      "source": "/notice",
+      "source": "/notice/:path*",
       "destination": "http://busopen.jeju.go.kr/OpenAPI/service/bis/Notice"
     },
     {
-      "source": "/station",
+      "source": "/station/:path*",
       "destination": "http://busopen.jeju.go.kr/OpenAPI/service/bis/Station"
     },
     {
-      "source": "/arrivalInfo",
-      "destination": "https://bus.jeju.go.kr/api/searchArrivalInfoList.do?station_id:stationId"
+      "source": "/arrivalInfo/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "stationId",
+          "value": "stationId"
+        }
+      ],
+      "permanent": false,
+      "destination": "https://bus.jeju.go.kr/api/searchArrivalInfoList.do/:path*"
     }
   ]
 }
