@@ -3,6 +3,14 @@
     {
       "source": "/notice",
       "destination": "http://busopen.jeju.go.kr/OpenAPI/service/bis/Notice"
+    },
+    {
+      "source": "/station",
+      "destination": "http://busopen.jeju.go.kr/OpenAPI/service/bis/Station"
+    },
+    {
+      "source": "/arrivalInfo",
+      "destination": "/arrivalInfo"
     }
   ]
 }
