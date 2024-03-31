@@ -31,7 +31,7 @@
       "destination": "http://bus.jeju.go.kr/api/searchBusRouteStationList.do?/:path*"
     },
     {
-      "source": "/routeList",
+      "source": "/routeList/:path*",
       "destination": "http://bus.jeju.go.kr/api/searchBusRouteList.do"
     },
     {
