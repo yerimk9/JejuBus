@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "jeju-bus.vercel.app"],
+    origin: ["http://localhost:3000", "https://jeju-bus.vercel.app"],
     credentials: true,
   })
 );
