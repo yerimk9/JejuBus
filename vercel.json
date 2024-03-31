@@ -17,7 +17,6 @@
           "value": "stationId"
         }
       ],
-      "permanent": false,
       "destination": "https://bus.jeju.go.kr/api/searchArrivalInfoList.do/:path*"
     }
   ]
