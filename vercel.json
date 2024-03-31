@@ -31,11 +31,11 @@
       "destination": "http://bus.jeju.go.kr/api/searchBusRouteStationList.do?/:path*"
     },
     {
-      "source": "/routeList/:path*",
+      "source": "/routeList",
       "destination": "http://bus.jeju.go.kr/api/searchBusRouteList.do"
     },
     {
-      "source": "/busLocation/:path*",
+      "source": "/busLocation",
       "destination": "http://bus.jeju.go.kr/api/searchBusAllocList.do"
     }
   ]
