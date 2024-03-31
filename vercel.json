@@ -10,7 +10,7 @@
     },
     {
       "source": "/arrivalInfo",
-      "destination": "https://bus.jeju.go.kr/api/searchArrivalInfoList.do?station_id=:stationId"
+      "destination": "https://bus.jeju.go.kr/api/searchArrivalInfoList.do?station_id:stationId"
     }
   ]
 }
