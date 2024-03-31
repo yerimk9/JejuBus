@@ -15,6 +15,14 @@ if (mode === "development") {
     })
   );
 }
+if (mode === "production") {
+  app.use(
+    cors({
+      origin: ["https://jeju-bus.vercel.app/"],
+      credentials: true,
+    })
+  );
+}
 
 app.use(
   cookieParser(process.env.COOKIE_SECRET, { sameSite: "None", secure: true })
