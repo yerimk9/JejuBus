@@ -40,7 +40,14 @@
     },
     {
       "source": "/map",
-      "destination": "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
+      "has": [
+        {
+          "type": "query",
+          "key": "location",
+          "value": "location"
+        }
+      ],
+      "destination": "https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=busStop&"
     }
   ]
 }
