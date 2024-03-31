@@ -72,9 +72,7 @@ function RouteSearchPage(props) {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(
-          "https://bus.jeju.go.kr/api/searchBusRouteList.do"
-        );
+        const response = await fetch("/routeList");
         const json = await response.json();
         setAllRoute(json);
       } catch (error) {
