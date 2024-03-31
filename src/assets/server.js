@@ -5,11 +5,10 @@ const fetch = require("node-fetch");
 require("dotenv").config();
 
 const app = express();
-const mode = process.env.NODE_ENV; // 환경 변수에서 현재 모드를 가져옴
 
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000", "https://jeju-bus.vercel.app"],
     credentials: true,
   })
 );
