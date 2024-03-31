@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/api/:path*",
+      "source": "/notice",
       "destination": "http://busopen.jeju.go.kr/OpenAPI/service/bis/Notice"
     }
   ]
