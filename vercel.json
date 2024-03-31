@@ -29,6 +29,14 @@
         }
       ],
       "destination": "http://bus.jeju.go.kr/api/searchBusRouteStationList.do?/:path*"
+    },
+    {
+      "source": "/routeList/:path*",
+      "destination": "http://bus.jeju.go.kr/api/searchBusRouteList.do"
+    },
+    {
+      "source": "/busLocation",
+      "destination": "http://bus.jeju.go.kr/api/searchBusAllocList.do"
     }
   ]
 }
