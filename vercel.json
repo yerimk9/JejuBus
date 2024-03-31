@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://jeju-bus.vercel.app/:path"
+      "destination": "http://busopen.jeju.go.kr/OpenAPI/service/bis/Notice"
     }
   ]
 }
