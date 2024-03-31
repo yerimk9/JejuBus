@@ -69,34 +69,12 @@ function RouteSearchPage(props) {
     e.preventDefault();
   };
 
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     try {
-  //       const response = await fetch("/routeList");
-  //       const json = await response.json();
-  //       setAllRoute(json);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   }
-
-  //   fetchData();
-  // }, []);
   useEffect(() => {
     async function fetchData() {
       try {
         const response = await fetch("/routeList");
-        if (response.redirected) {
-          // 리디렉션된 위치를 확인
-          const redirectedUrl = response.url;
-          // 리디렉션된 위치로 새로운 요청 보내기
-          const newResponse = await fetch(redirectedUrl);
-          const json = await newResponse.json();
-          setAllRoute(json); // 데이터 설정
-        } else {
-          const json = await response.json();
-          setAllRoute(json); // 데이터 설정
-        }
+        const json = await response.json();
+        setAllRoute(json);
       } catch (error) {
         console.error(error);
       }
