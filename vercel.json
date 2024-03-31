@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/OpenAPI/:path*",
+      "destination": "https://jeju-bus.vercel.app/:path*"
+    }
+  ]
+}

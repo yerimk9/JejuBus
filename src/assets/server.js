@@ -7,20 +7,12 @@ require("dotenv").config();
 const app = express();
 const mode = process.env.NODE_ENV; // 환경 변수에서 현재 모드를 가져옴
 
-const allowedOrigins = ["http://localhost:3000", "https://jeju-bus.vercel.app"];
-
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true, // 자격 증명 허용
-};
-
-app.use(cors(corsOptions));
+app.use(
+  cors({
+    origin: ["http://localhost:3000"],
+    credentials: true,
+  })
+);
 
 app.use(
   cookieParser(process.env.COOKIE_SECRET, { sameSite: "None", secure: true })
