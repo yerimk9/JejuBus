@@ -22,7 +22,7 @@ app.listen(3001, () => {
 });
 
 // 공지사항 정보 (17)
-app.get("/notice", async function (req, res) {
+app.get("/api/notice", async function (req, res) {
   try {
     const response = await fetch(
       "http://busopen.jeju.go.kr/OpenAPI/service/bis/Notice"
@@ -36,7 +36,7 @@ app.get("/notice", async function (req, res) {
 });
 
 // 정류소 목록 정보 (10)
-app.get("/station", async function (req, res) {
+app.get("/api/station", async function (req, res) {
   try {
     const response = await fetch(
       "http://busopen.jeju.go.kr/OpenAPI/service/bis/Station"
@@ -50,7 +50,7 @@ app.get("/station", async function (req, res) {
 });
 
 // 정류장 도착 예정 정보 [정류장 아이디]
-app.get("/arrivalInfo", async function (req, res) {
+app.get("/api/arrivalInfo", async function (req, res) {
   const { stationId } = req.query;
 
   try {
@@ -66,7 +66,7 @@ app.get("/arrivalInfo", async function (req, res) {
 });
 
 // 노선 경유 정류장 조회 [노선아이디] = 버스가 어디어디 정류장 들르는지
-app.get("/busRouteStation", async function (req, res) {
+app.get("/api/busRouteStation", async function (req, res) {
   const { routeId } = req.query;
 
   try {
@@ -82,7 +82,7 @@ app.get("/busRouteStation", async function (req, res) {
 });
 
 // 모든 노선목록 조회
-app.get("/routeList", async function (req, res) {
+app.get("/api/routeList", async function (req, res) {
   try {
     const response = await fetch(
       `http://bus.jeju.go.kr/api/searchBusRouteList.do`
@@ -96,7 +96,7 @@ app.get("/routeList", async function (req, res) {
 });
 
 // 버스 위치정보 조회
-app.get("/busLocation", async function (req, res) {
+app.get("/api/busLocation", async function (req, res) {
   try {
     const response = await fetch(
       `http://bus.jeju.go.kr/api/searchBusAllocList.do`
@@ -109,7 +109,7 @@ app.get("/busLocation", async function (req, res) {
   }
 });
 
-app.get("/map", async function (req, res) {
+app.get("/api/map", async function (req, res) {
   const { location } = req.query;
 
   try {
