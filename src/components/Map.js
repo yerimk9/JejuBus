@@ -23,7 +23,7 @@ function Map() {
   const fetchBusStops = async () => {
     try {
       const response = await fetch(
-        `/map?keyword=busStop&location=${currentLocation.lat}%2C${currentLocation.lng}&radius=2000&type=busStop`
+        `/map?keyword=busStop&location=${currentLocation.lat}%2C${currentLocation.lng}&radius=2000&type=busStop&key=${process.env.REACT_APP_GOOGLE_API_KEY}`
       );
       const data = await response.json();
       console.log(data);

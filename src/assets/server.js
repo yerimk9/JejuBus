@@ -109,11 +109,11 @@ app.get("/busLocation", async function (req, res) {
 });
 
 app.get("/map", async function (req, res) {
-  const { location } = req.query;
+  // const { location } = req.query;
 
   try {
     const response = await fetch(
-      `https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=busStop&location=${location}&radius=2000&type=busStop&key=${process.env.REACT_APP_GOOGLE_API_KEY}`
+      `https://maps.googleapis.com/maps/api/place/nearbysearch/json`
     );
     const text = await response.json();
     res.send(text);
