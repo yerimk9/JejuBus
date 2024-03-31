@@ -13,11 +13,22 @@
       "has": [
         {
           "type": "query",
-          "key": "station_id",
+          "key": "stationId",
           "value": "stationId"
         }
       ],
       "destination": "https://bus.jeju.go.kr/api/searchArrivalInfoList.do/:path*"
+    },
+    {
+      "source": "/busRouteStation/:path*",
+      "has": [
+        {
+          "type": "query",
+          "key": "routeId",
+          "value": "routeId"
+        }
+      ],
+      "destination": "http://bus.jeju.go.kr/api/searchBusRouteStationList.do?/:path*"
     }
   ]
 }
