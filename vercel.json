@@ -13,8 +13,8 @@
       "has": [
         {
           "type": "query",
-          "key": "station_id",
-          "value": "station_id"
+          "key": "stationId",
+          "value": "stationId"
         }
       ],
       "destination": "https://bus.jeju.go.kr/api/searchArrivalInfoList.do"
