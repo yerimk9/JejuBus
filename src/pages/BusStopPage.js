@@ -102,8 +102,8 @@ function BusStopPage(props) {
     async function fetchData() {
       try {
         const response = await fetch("/station"); // 모든 버스정류장 목록정보
-        console.log(response);
         const xmlText = await response.text();
+        console.log(xmlText);
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(xmlText, "application/xml");
 
