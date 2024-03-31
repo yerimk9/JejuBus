@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://jeju-bus.vercel.app"
+      "destination": "https://api.test.com/api/$1"
     }
   ]
 }
