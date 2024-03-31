@@ -37,6 +37,10 @@
     {
       "source": "/busLocation",
       "destination": "http://bus.jeju.go.kr/api/searchBusAllocList.do"
+    },
+    {
+      "source": "/map",
+      "destination": "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
     }
   ]
 }
