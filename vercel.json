@@ -9,11 +9,11 @@
       "destination": "http://busopen.jeju.go.kr/OpenAPI/service/bis/Station"
     },
     {
-      "source": "/arrivalInfo/:path*",
+      "source": "/arrivalInfo",
       "has": [
         {
           "type": "query",
-          "key": "stationId",
+          "key": "station_id",
           "value": "stationId"
         }
       ],
