@@ -3,7 +3,7 @@ import styles from "../styles/Nav.module.css";
 import logoImg from "../assets/images/IMG_9707.png";
 import login from "../assets/images/login.svg";
 import logout from "../assets/images/logout.svg";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth, firestore } from "../firebase";
 
@@ -12,6 +12,7 @@ function Nav({ choice }) {
   const [isLoggingIn, setIsLoggingIn] = useState(false);
   const [userNickname, setUserNickname] = useState("");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
@@ -93,7 +94,7 @@ function Nav({ choice }) {
           <button
             type="button"
             className={styles.choice}
-            onClick={() => (window.location.href = "/notice")}
+            onClick={() => navigate("/notice")}
           >
             공지사항
           </button>
