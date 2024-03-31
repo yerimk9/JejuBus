@@ -14,19 +14,14 @@ export const firebaseConfig = {
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 
-// // Initialize Firebase
-// export const app = initializeApp(firebaseConfig);
-// export const analytics = getAnalytics(app);
-// export const auth = getAuth(app);
-
-// firebase.initializeApp(firebaseConfig);
-// export const firestore = firebase.firestore();
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
 export const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(app);
 export const auth = getAuth(app);
+
+firebase.initializeApp(firebaseConfig);
 export const firestore = firebase.firestore();
+
 // 현재 사용자 가져오기
 export const getCurrentUserNickname = () => {
   const user = auth.currentUser;

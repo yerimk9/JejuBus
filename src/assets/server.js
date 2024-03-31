@@ -26,12 +26,10 @@ app.listen(3001, () => {
 
 // 공지사항 정보 (17)
 app.get("/notice", async function (req, res) {
-  const apiUrl =
-    mode === "development"
-      ? "http://localhost:3001/notice"
-      : "http://busopen.jeju.go.kr/OpenAPI/service/bis/Notice";
   try {
-    const response = await fetch(apiUrl);
+    const response = await fetch(
+      "http://busopen.jeju.go.kr/OpenAPI/service/bis/Notice"
+    );
     const text = await response.text();
     res.send(text);
   } catch (e) {
@@ -42,12 +40,10 @@ app.get("/notice", async function (req, res) {
 
 // 정류소 목록 정보 (10)
 app.get("/station", async function (req, res) {
-  const apiUrl =
-    mode === "development"
-      ? "http://localhost:3001/notice"
-      : "http://busopen.jeju.go.kr/OpenAPI/service/bis/Station";
   try {
-    const response = await fetch(apiUrl);
+    const response = await fetch(
+      "http://busopen.jeju.go.kr/OpenAPI/service/bis/Station"
+    );
     const text = await response.text();
     res.send(text);
   } catch (e) {
@@ -60,12 +56,10 @@ app.get("/station", async function (req, res) {
 app.get("/arrivalInfo", async function (req, res) {
   const { stationId } = req.query;
 
-  const apiUrl =
-    mode === "development"
-      ? "http://localhost:3001/notice"
-      : `https://bus.jeju.go.kr/api/searchArrivalInfoList.do?station_id=${stationId}`;
   try {
-    const response = await fetch(apiUrl);
+    const response = await fetch(
+      `https://bus.jeju.go.kr/api/searchArrivalInfoList.do?station_id=${stationId}`
+    );
     const text = await response.text();
     res.send(text);
   } catch (e) {
@@ -78,12 +72,10 @@ app.get("/arrivalInfo", async function (req, res) {
 app.get("/busRouteStation", async function (req, res) {
   const { routeId } = req.query;
 
-  const apiUrl =
-    mode === "development"
-      ? "http://localhost:3001/notice"
-      : `http://bus.jeju.go.kr/api/searchBusRouteStationList.do?route_id=${routeId}`;
   try {
-    const response = await fetch(apiUrl);
+    const response = await fetch(
+      `http://bus.jeju.go.kr/api/searchBusRouteStationList.do?route_id=${routeId}`
+    );
     const text = await response.text();
     res.send(text);
   } catch (e) {
@@ -94,12 +86,10 @@ app.get("/busRouteStation", async function (req, res) {
 
 // 모든 노선목록 조회
 app.get("/routeList", async function (req, res) {
-  const apiUrl =
-    mode === "development"
-      ? "http://localhost:3001/notice"
-      : `http://bus.jeju.go.kr/api/searchBusRouteList.do`;
   try {
-    const response = await fetch(apiUrl);
+    const response = await fetch(
+      `http://bus.jeju.go.kr/api/searchBusRouteList.do`
+    );
     const text = await response.text();
     res.send(text);
   } catch (e) {
@@ -110,12 +100,10 @@ app.get("/routeList", async function (req, res) {
 
 // 버스 위치정보 조회
 app.get("/busLocation", async function (req, res) {
-  const apiUrl =
-    mode === "development"
-      ? "http://localhost:3001/notice"
-      : `http://bus.jeju.go.kr/api/searchBusAllocList.do`;
   try {
-    const response = await fetch(apiUrl);
+    const response = await fetch(
+      `http://bus.jeju.go.kr/api/searchBusAllocList.do`
+    );
     const text = await response.text();
     res.send(text);
   } catch (e) {
