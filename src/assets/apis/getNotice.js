@@ -59,7 +59,7 @@ export async function getNotice(startIdx, endIdx) {
 
 export async function getNoticeTotalCount() {
   try {
-    const response = await fetch("/api/notice");
+    const response = await fetch("/notice");
     const xmlText = await response.text();
     const parser = new DOMParser();
     const xmlDoc = parser.parseFromString(xmlText, "application/xml");
