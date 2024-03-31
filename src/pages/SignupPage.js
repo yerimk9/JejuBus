@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Nav from "../components/Nav";
 import styles from "../styles/SignupPage.module.css";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+} from "firebase/auth";
 // createUserWithEmailAndPassword 함수는 이메일과 비밀번호를 사용하여 새로운 사용자를 생성, 등록된 사용자의 정보를 반환
 import { collection, addDoc } from "firebase/firestore";
 import { auth, firestore } from "../firebase";
@@ -16,6 +19,14 @@ function SignupPage(props) {
   });
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        navigate("/");
+      }
+    });
+  });
 
   // 공통된 onChange 핸들러 함수
   const handleInputChange = (e) => {

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Nav from "../components/Nav";
 import styles from "../styles/LoginPage.module.css";
 import { Link } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 // signInWithEmailAndPassword 는 이메일과 비밀번호를 인자로 받아, 로그인을 시도하고 성공하면 사용자 정보를 반환
 import { auth } from "../firebase";
 import GoogleAuth from "../components/GoogleAuth";
@@ -15,6 +15,14 @@ function LoginPage() {
     password: "",
   });
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        navigate("/");
+      }
+    });
+  });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
