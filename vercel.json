@@ -43,11 +43,11 @@
       "has": [
         {
           "type": "query",
-          "key": "location",
-          "value": "location"
+          "key": "keyword",
+          "value": "busStop"
         }
       ],
-      "destination": "https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=busStop&"
+      "destination": "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
     }
   ]
 }

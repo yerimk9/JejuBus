@@ -23,7 +23,7 @@ function Map() {
   const fetchBusStops = async () => {
     try {
       const response = await fetch(
-        `/map?location=${currentLocation.lat}%2C${currentLocation.lng}`
+        `/map?keyword=busStop&location=${currentLocation.lat}%2C${currentLocation.lng}&radius=2000&type=busStop`
       );
       const data = await response.json();
       console.log(data);
