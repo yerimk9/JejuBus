@@ -7,6 +7,10 @@
   padding-bottom: 30px;
 }
 
+.mainNav {
+  min-width: 450px;
+}
+
 .linksContainer {
   width: calc(100vw - 40%);
   display: grid;
@@ -71,5 +75,9 @@
 @media all and (max-width: 479px) {
   .linksContainer {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
+  .mainContainer {
+    margin-right: 60px;
   }
 }

@@ -43,6 +43,7 @@
   background: #f9ca26;
   border: none;
   font-size: 20px;
+  color: #000000;
 }
 
 @media all and (min-width: 850px) and (max-width: 900px) {
