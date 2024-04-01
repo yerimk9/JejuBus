@@ -10,7 +10,7 @@
     },
     {
       "source": "/routeList",
-      "destination": "http://bus.jeju.go.kr/api/searchBusRouteList.do"
+      "destination": "https://bus.jeju.go.kr/api/searchBusRouteList.do"
     },
     {
       "source": "/busLocation",
