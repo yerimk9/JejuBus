@@ -28,7 +28,7 @@
       "destination": "https://bus.jeju.go.kr/api/searchArrivalInfoList.do"
     },
     {
-      "source": "/busRouteStation/:path*",
+      "source": "/busRouteStation",
       "has": [
         {
           "type": "query",
@@ -36,7 +36,7 @@
           "value": "routeId"
         }
       ],
-      "destination": "http://bus.jeju.go.kr/api/searchBusRouteStationList.do?/:path*"
+      "destination": "https://bus.jeju.go.kr/api/searchBusRouteStationList.do"
     },
     {
       "source": "/map",

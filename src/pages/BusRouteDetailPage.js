@@ -55,7 +55,7 @@ function BusRouteDetailPage(props) {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "/busRouteStation?routeId=" + routeInfo["ROUTE_ID"] // 버스가 어디어디 들르는지
+          `/busRouteStation?routeId=${routeInfo["ROUTE_ID"]}` // 버스가 어디어디 들르는지
         );
         const json = await response.json();
         setRouteInfoList(json);
