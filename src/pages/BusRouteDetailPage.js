@@ -58,8 +58,7 @@ function BusRouteDetailPage(props) {
           `/busRouteStation?route_id=${routeInfo["ROUTE_ID"]}` // 버스가 어디어디 들르는지
         );
         console.log(response);
-        const json = await response.text();
-        console.log(JSON.parse(json));
+        const json = await response.json();
         console.log(json);
         setRouteInfoList(json);
       } catch (error) {
