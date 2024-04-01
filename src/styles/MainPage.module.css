@@ -7,10 +7,6 @@
   padding-bottom: 30px;
 }
 
-.mainNav {
-  min-width: 680px;
-}
-
 .linksContainer {
   width: calc(100vw - 40%);
   display: grid;

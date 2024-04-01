@@ -1,7 +1,6 @@
 .container {
   padding: 30px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -85,6 +84,5 @@
 
   .container {
     padding: 20px;
-    width: 500px;
   }
 }
