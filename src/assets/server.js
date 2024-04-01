@@ -54,7 +54,7 @@ app.get("/arrivalInfo", async function (req, res) {
   const { station_id } = req.query;
   try {
     const response = await fetch(
-      `https://bus.jeju.go.kr/api/searchArrivalInfoList.do?station_id=${station_id}`
+      `https://bus.jeju.go.kr/api/searchArrivalInfoList.do?stationId=${station_id}` // 보류
     );
     const text = await response.text();
     res.send(text);
@@ -66,11 +66,11 @@ app.get("/arrivalInfo", async function (req, res) {
 
 // 노선 경유 정류장 조회 [노선아이디] = 버스가 어디어디 정류장 들르는지
 app.get("/busRouteStation", async function (req, res) {
-  const { routeId } = req.query;
+  const { route_id } = req.query;
 
   try {
     const response = await fetch(
-      `http://bus.jeju.go.kr/api/searchBusRouteStationList.do?route_id=${routeId}`
+      `http://bus.jeju.go.kr/api/searchBusRouteStationList.do?routeId=${route_id}`
     );
     const text = await response.text();
     res.send(text);
