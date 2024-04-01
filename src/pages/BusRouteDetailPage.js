@@ -13,7 +13,6 @@ function BusRouteDetailPage(props) {
       try {
         const response = await fetch("/busLocation");
         const json = await response.json();
-        console.log(json);
 
         // 로컬 스토리지에서 routeInfoString 가져오기
         const routeInfoString = localStorage.getItem("routeInfo");
@@ -60,6 +59,7 @@ function BusRouteDetailPage(props) {
         );
         console.log(response);
         const json = await response.text();
+        console.log(JSON.parse(json));
         console.log(json);
         setRouteInfoList(json);
       } catch (error) {
