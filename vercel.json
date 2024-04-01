@@ -14,7 +14,7 @@
     },
     {
       "source": "/busLocation",
-      "destination": "http://bus.jeju.go.kr/api/searchBusAllocList.do"
+      "destination": "https://bus.jeju.go.kr/api/searchBusAllocList.do"
     },
     {
       "source": "/arrivalInfo",
