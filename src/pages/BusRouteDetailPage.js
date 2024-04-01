@@ -57,9 +57,7 @@ function BusRouteDetailPage(props) {
         const response = await fetch(
           `/busRouteStation?route_id=${routeInfo["ROUTE_ID"]}` // 버스가 어디어디 들르는지
         );
-        console.log(response);
         const json = await response.json();
-        console.log(json);
         setRouteInfoList(json);
       } catch (error) {
         console.error("Error fetching data:", error);

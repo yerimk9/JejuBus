@@ -16,16 +16,8 @@
       "source": "/busLocation",
       "destination": "https://bus.jeju.go.kr/api/searchBusAllocList.do"
     },
-
     {
       "source": "/arrivalInfo",
-      "has": [
-        {
-          "type": "query",
-          "key": "station_id",
-          "value": "stationId"
-        }
-      ],
       "destination": "https://bus.jeju.go.kr/api/searchArrivalInfoList.do"
     },
     {
