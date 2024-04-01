@@ -30,7 +30,7 @@ function BusStopDetailPage(props) {
     const fetchArrivalInfo = async () => {
       try {
         const response = await fetch(
-          `/arrivalInfo?station_id=${stationInfo.stationId}` // 정류장 도착 예정 정보
+          `/arrivalInfo?stationId=${stationInfo.stationId}` // 정류장 도착 예정 정보
         );
         const json = await response.json();
         setArrivalInfo(json);
