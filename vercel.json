@@ -9,6 +9,14 @@
       "destination": "http://busopen.jeju.go.kr/OpenAPI/service/bis/Station"
     },
     {
+      "source": "/routeList*",
+      "destination": "http://bus.jeju.go.kr/api/searchBusRouteList.do"
+    },
+    {
+      "source": "/busLocation",
+      "destination": "http://bus.jeju.go.kr/api/searchBusAllocList.do"
+    },
+    {
       "source": "/arrivalInfo",
       "has": [
         {
@@ -29,14 +37,6 @@
         }
       ],
       "destination": "http://bus.jeju.go.kr/api/searchBusRouteStationList.do?/:path*"
-    },
-    {
-      "source": "/routeList/:path*",
-      "destination": "http://bus.jeju.go.kr/api/searchBusRouteList.do"
-    },
-    {
-      "source": "/busLocation",
-      "destination": "http://bus.jeju.go.kr/api/searchBusAllocList.do"
     },
     {
       "source": "/map",
